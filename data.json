@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Chirag Sukhija",
+    "age": "21",
+    "email": "chiragsukhija4664@gmail.com",
+    "password": "chirag",
+    "phone": "6280504233"
+  },
+  {
+    "id": 2,
+    "name": "Chirag Sukhija",
+    "age": "21",
+    "email": "chiragsukhija4664@gmail.com",
+    "password": "chirag",
+    "phone": "6280504233"
+  },
+  {
+    "id": 3,
+    "name": "nitish",
+    "age": "7",
+    "email": "nitish@gmail.com",
+    "password": "nnnn",
+    "phone": "6280504233"
+  },
+  {
+    "id": 4,
+    "name": "lopinder",
+    "age": "69",
+    "email": "lopinder@gmail.com",
+    "password": "lopi",
+    "phone": "62805343223"
+  },
+  {
+    "id": 5,
+    "name": "adsa",
+    "age": "23",
+    "email": "11@gmail.com",
+    "password": "11",
+    "phone": "111"
+  },
+  {
+    "id": 6,
+    "name": "abc",
+    "age": "18",
+    "email": "abc@gmail.com",
+    "password": "11",
+    "phone": "6232"
+  }
+]

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <video autoplay muted loop>
+    <source src="liquid.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+  <h1 id="heading">Registration form</h1>
+  <form id="register-form">
+    <label for="name">Username:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="age">Age: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="number" id="age" name="age" required><br>
+
+    <label for="email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="password"> Password:</label>
+    <input type="password" id="password" name="password" required><br>
+
+    <label for="phone">Phone:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="number" id="phone" name="phone" required><br>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <div id="response-message"></div>
+
+<script>
+document.getElementById("register-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const formData = {
+    name: document.getElementById("name").value,
+    age: document.getElementById("age").value,
+    email: document.getElementById("email").value,
+    password: document.getElementById("password").value,
+    phone: document.getElementById("phone").value
+  };
+
+  fetch('http://localhost:3001/register_user', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById("response-message").innerText = data.message;
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+});
+</script>
+
+
+</body>
+</html>
